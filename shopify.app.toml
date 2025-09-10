@@ -7,7 +7,6 @@ application_url = "https://commercenext-mcp-agent.onrender.com"
 embedded = true
 
 [build]
-include_config_on_deploy = true
 
 [webhooks]
 api_version = "2025-04"
@@ -22,5 +21,4 @@ redirect_urls = [ "https://commercenext-mcp-agent.onrender.com/api/auth" ]
 [pos]
 embedded = false
 
-[mcp.customer_authentication]
 redirect_urls = ["https://commercenext-mcp-agent.onrender.com/auth/callback", "https://commercenext-mcp-agent.onrender.com/auth/shopify/callback", "https://commercenext-mcp-agent.onrender.com/api/auth/callback"]
