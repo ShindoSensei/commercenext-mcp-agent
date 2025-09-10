@@ -1,0 +1,26 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "3f007dbba264402f557cce7077984eca"
+name = "commercenext-mcp-agent-app"
+handle = "commercenext-mcp-agent-app"
+application_url = "https://commercenext-mcp-agent.onrender.com"
+embedded = true
+
+[build]
+include_config_on_deploy = true
+
+[webhooks]
+api_version = "2025-04"
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "customer_read_customers,customer_read_orders,customer_read_store_credit_account_transactions,customer_read_store_credit_accounts,unauthenticated_read_product_listings"
+
+[auth]
+redirect_urls = [ "https://commercenext-mcp-agent.onrender.com/api/auth" ]
+
+[pos]
+embedded = false
+
+[mcp.customer_authentication]
+redirect_urls = ["https://commercenext-mcp-agent.onrender.com/auth/callback", "https://commercenext-mcp-agent.onrender.com/auth/shopify/callback", "https://commercenext-mcp-agent.onrender.com/api/auth/callback"]
